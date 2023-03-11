@@ -1,0 +1,56 @@
+.mobile a, nav .nav--link {
+  padding: 1vh 0;
+  margin: 3vh auto;
+}
+
+.mobile a, nav a {
+  display: block !important;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.mobile {
+  position: relative;
+  display: none;
+}
+.mobile--bun {
+  cursor: pointer;
+  width: max-content;
+}
+.mobile--view {
+  width: 90vw;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  top: 100;
+  z-index: 1000;
+  right: 0;
+  transform: translateX(0%);
+}
+@media screen and (max-width: 991px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.desktop--nav {
+  flex: 25%;
+}
+@media screen and (max-width: 991px) {
+  .desktop--nav {
+    display: none;
+  }
+}
+.desktop--space {
+  flex: 75%;
+  flex-grow: 1;
+}
+@media screen and (max-width: 991px) {
+  .desktop--space {
+    flex: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
