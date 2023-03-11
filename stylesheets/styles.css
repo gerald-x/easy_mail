@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
 .mobile a, nav .nav--link {
   padding: 1vh 0;
   margin: 3vh auto;
@@ -27,7 +28,7 @@ body {
   top: 100;
   z-index: 1000;
   right: 0;
-  transform: translateX(0%);
+  transform: translateX(100%);
 }
 @media screen and (max-width: 991px) {
   .mobile {
@@ -51,6 +52,26 @@ body {
   .desktop--space {
     flex: 100%;
   }
+}
+
+.slideIn {
+  animation-name: slideIn;
+  animation-duration: 1s;
+  animation-delay: 0.2s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+.brand-text {
+  font-family: "Dancing Script", cursive;
 }
 
 /*# sourceMappingURL=styles.css.map */
