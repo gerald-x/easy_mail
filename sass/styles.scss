@@ -1,0 +1,67 @@
+%link-spacing {
+    padding: 1vh 0;
+    margin: 3vh auto;
+}
+
+%link-display {
+    display: block !important;
+}
+
+body {
+    overflow-x: hidden
+}
+
+nav{
+    a {
+        @extend %link-display;
+    }
+    .nav--link{
+        @extend %link-spacing;
+    }
+}
+
+.mobile{
+    position: relative;
+    display: none;
+    a {
+        @extend %link-display;
+        @extend %link-spacing;
+    }
+
+    &--bun {
+        cursor: pointer;
+        width: max-content;
+    }
+
+    &--view {
+        width: 90vw;
+        height: 100vh;
+        background-color: white;
+        position: absolute;
+        top: 100;
+        z-index: 1000;
+        right: 0;
+        transform: translateX(0%);
+    }
+    @media screen and (max-width:991px) {
+        display: block;
+    }
+}
+
+.desktop {
+
+    &--nav {
+        flex: 25%;
+        @media screen and (max-width:991px) {
+            display: none;
+        }
+    }
+
+    &--space {
+        flex: 75%;
+        flex-grow: 1;
+        @media screen and (max-width:991px) {
+            flex: 100%;
+        }
+    }
+}
