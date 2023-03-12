@@ -6,6 +6,8 @@
 
 .mobile a, nav a {
   display: block !important;
+  text-decoration: none;
+  color: black;
 }
 
 body {
@@ -56,7 +58,7 @@ body {
 
 .slideIn {
   animation-name: slideIn;
-  animation-duration: 1s;
+  animation-duration: 0.8s;
   animation-delay: 0.2s;
   animation-fill-mode: forwards;
   animation-play-state: running;
