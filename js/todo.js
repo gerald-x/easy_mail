@@ -31,6 +31,73 @@ document.addEventListener("DOMContentLoaded", ()=> {
         console.log(day)
         update_pagination(day=day)
     })
+    var sample_res = {
+        "tasks": [
+            {
+                "Date": "03/20/2023",
+                "Details": "Get the UI screens ready",
+                "Sender": "Lida",
+                "Task": "Design UI for SE575 project"
+            },
+            {
+                "Date": "03/23/2023",
+                "Details": "Submit project report for CS530",
+                "Sender": "Lida",
+                "Task": "Complete project report by March 23, 2023"
+            }
+        ]};
+    /*
+    console.log(sample_res["tasks"][0])
+    for (i=0; i<sample_res["tasks"].length; i++) {
+        var wrapper = document.createElement("tr")
+        var num = document.createElement("th")
+        var task = document.createElement("td")
+        var text_summary = document.createElement("td")
+        var date = document.createElement("td")
+        var sender = document.createElement("td")
+        var btn_wrapper = document.createElement("td")
+        var btn = document.createElement("button")
+
+        num.innerHTML = i+1
+        task.innerHTML = sample_res["tasks"][i]["Task"]
+        text_summary.classList.add("text-summary")
+        text_summary.innerHTML = sample_res["tasks"][i]["Details"]
+        date.innerHTML = sample_res["tasks"][i]["Date"]
+        sender.innerHTML = sample_res["tasks"][i]["Sender"]
+        btn.innerHTML = "Mark Done"
+        btn.classList.add("btn", "btn-sm", "btn-success")
+        btn_wrapper.appendChild(btn)
+
+        wrapper.append(num, task, text_summary, date, sender, btn_wrapper)
+        document.querySelector("tbody").appendChild(wrapper)
+    }*/
+
+    fetch("/api/task").then(response => response.json()).then(data =>{
+        for (i=0; i<data["tasks"].length; i++) {
+            var wrapper = document.createElement("tr")
+            var num = document.createElement("th")
+            var task = document.createElement("td")
+            var text_summary = document.createElement("td")
+            var date = document.createElement("td")
+            var sender = document.createElement("td")
+            var btn_wrapper = document.createElement("td")
+            var btn = document.createElement("button")
+    
+            num.innerHTML = i+1
+            task.innerHTML = data["tasks"][i]["Task"]
+            text_summary.classList.add("text-summary")
+            text_summary.innerHTML = data["tasks"][i]["Details"]
+            date.innerHTML = data["tasks"][i]["Date"]
+            sender.innerHTML = data["tasks"][i]["Sender"]
+            btn.innerHTML = "Mark Done"
+            btn.classList.add("btn", "btn-sm", "btn-success")
+            btn_wrapper.appendChild(btn)
+    
+            wrapper.append(num, task, text_summary, date, sender, btn_wrapper)
+            document.querySelector("tbody").appendChild(wrapper)
+        }
+    }
+    )
     
 })
 
@@ -44,14 +111,6 @@ function resize_screen(element){
 }
 
 function update_pagination(day="", status="") {
-    Date.prototype.addDays = function(days) {
-        var date = new Date(this.valueOf());
-        date.setDate(date.getDate() + days);
-        return date;
-    }
-
-    const date = day.trim() === "" ? new Date() : new Date(day.trim());
-
     var day_1 = document.querySelector(".date-1")
     var month_1 = document.querySelector(".month-1")
     var year_1 = document.querySelector(".year-1")
@@ -67,6 +126,16 @@ function update_pagination(day="", status="") {
     var day_4 = document.querySelector(".date-4")
     var month_4 = document.querySelector(".month-4")
     var year_4 = document.querySelector(".year-4")
+
+    Date.prototype.addDays = function(days) {
+        var date = new Date(this.valueOf());
+        date.setDate(date.getDate() + days);
+        return date;
+    }
+
+    const date = day.trim() === "" ? new Date() : new Date(day.trim());
+
+    
 
     if (status.trim() === "decrease"){
         var first_date = new Date(date.addDays(-4));
@@ -88,6 +157,7 @@ function update_pagination(day="", status="") {
         day_4.textContent = fourth_date.getDate()
         month_4.textContent = fourth_date.toLocaleString("en-US", {month:"long"})
         year_4.textContent = fourth_date.getFullYear()
+
 
     } else {
         var first_date = new Date(date.addDays(0));

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
 .mobile a, nav .nav--link {
-  padding: 1vh 0;
-  margin: 3vh auto;
+  padding: 1vh 2vw 1vh 0;
+  margin: 1vh 0;
 }
 
 .mobile a, nav a {
@@ -10,8 +10,23 @@
   color: black;
 }
 
+.text-primary-color {
+  color: rgb(110, 231, 183) !important;
+}
+
 body {
   overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+nav .nav--link {
+  width: max-content;
+}
+nav .nav--link:hover {
+  color: rgb(110, 231, 183) !important;
 }
 
 .mobile {
@@ -30,7 +45,7 @@ body {
   top: 100;
   z-index: 1000;
   right: 0;
-  transform: translateX(100%);
+  transform: translateX(200%);
 }
 @media screen and (max-width: 991px) {
   .mobile {
@@ -55,7 +70,6 @@ body {
     flex: 100%;
   }
 }
-
 .slideIn {
   animation-name: slideIn;
   animation-duration: 0.8s;
@@ -66,7 +80,7 @@ body {
 
 @keyframes slideIn {
   from {
-    transform: translateX(100%);
+    transform: translateX(200%);
   }
   to {
     transform: translateX(0%);
@@ -74,6 +88,34 @@ body {
 }
 .brand-text {
   font-family: "Dancing Script", cursive;
+}
+
+.head--links a:hover {
+  transition-duration: 0.4s;
+  color: rgba(0, 0, 0, 0.45);
+  border-bottom: 2px solid rgb(110, 231, 183) !important;
+}
+.head--links .active--link {
+  border-bottom: 2px solid rgb(110, 231, 183) !important;
+}
+
+.text-summary {
+  max-width: 35vw;
+}
+@media screen and (max-width: 768px) {
+  .text-summary {
+    max-width: 45vw;
+  }
+}
+@media screen and (max-width: 760px) {
+  .text-summary {
+    min-width: 50vw;
+    max-width: none;
+  }
+}
+
+.div-scroll {
+  width: 95vw !important;
 }
 
 /*# sourceMappingURL=styles.css.map */

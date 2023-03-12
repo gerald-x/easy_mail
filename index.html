@@ -24,77 +24,142 @@
         <div class="mobile--view">
             <div class="w-max mx-auto mt-12">
                 <a class="nav--link" href="">To Do</a>
-                <a class="nav--link" href="">Notifications</a>
-                <a class="nav--link" href="">Upcoming meetings</a>
-                <a class="nav--link" href="">Your Finances</a>
-                <a class="nav--link" href="">Due Dates</a>
+                <div class="nav--link fs-5 font-semibold border-b-2 border-b-emerald-300 w-max" href="">Categories</div>
+                <a class="nav--link" href="">Teams</a>
+                <a class="nav--link" href="">Product</a>
+                <a class="nav--link" href="">Dev</a>
+                <a class="nav--link" href="">Finances</a>
                 <a class="nav--link text-3xl" href=""><i class="fa-regular fa-calendar-days"></i></a>
             </div>
         </div>
     </div>
     
     
-    <div class="flex desktop">
+    <div class="flex desktop min-vw-100">
        
         <nav class="ml-4 pl-8 desktop--nav">
             <h4 class="my-8 text-4xl brand-text text-emerald-500">Easy Mail</h4>
             <div class="mt-10 pt-8">
                 <a class="nav--link" href="">To Do</a>
-                <a class="nav--link" href="">Notifications</a>
-                <a class="nav--link" href="">Upcoming meetings</a>
-                <a class="nav--link" href="">Your Finances</a>
-                <a class="nav--link" href="">Due Dates</a>
+                <div class="py-2 mt-2 mb-1 fs-5 font-semibold border-b-2 border-b-emerald-300 w-max" href="">Categories</div>
+                <a class="nav--link" href="">Teams</a>
+                <a class="nav--link" href="">Product</a>
+                <a class="nav--link" href="">Dev</a>
+                <a class="nav--link" href="">Finances</a>
                 <a class="nav--link text-3xl" href=""><i class="fa-regular fa-calendar-days"></i></a>
             </div>
         </nav>
 
-        <div class="bg-emerald-200 h-screen desktop--space pt-5">
+        <div class="min-vh-100 bg-slate-100 desktop--space pt-4">
             <div class="container">
-                <nav aria-label="Page navigation" class="mt-8">
+                <nav aria-label="Page navigation" class="mt-6">
                     <ul class="pagination d-flex justify-content-center align-items-center px-3 flex-wrap">
-                      <li class="page-item">
+                    <li class="page-item">
                         <a class="page-link previous-label" href="#" aria-label="Previous">
                           <span aria-hidden="true">&laquo;</span>
                         </a>
-                      </li>
+                    </li>
     
-                      <li class="page-item mx-1">
-                        <a class="page-link rounded-lg" href="#">
-                            <p class="block month-1 my-2 text-sm"></p>
-                            <span class="date-1"></span>
-                            <p class="year-1 text-sm mt-3"></p>
+                    <li class="page-item">
+                        <a class="page-link day-1 rounded-lg font-semibold text-black" href="#">
+                            <p class="block month-1 my-2"></p>
+                            <span class="date-1 text-4xl"></span>
+                            <p class="year-1 mt-3 text-xs"></p>
                         </a>
                         </li>
-                      <li class="page-item mx-1">
-                        <a class="page-link rounded-lg" href="#">
-                            <p class="block month-2 my-2 text-sm"></p>
-                            <span class="date-2"></span>
-                            <p class="year-2 text-sm mt-3"></p>
+
+                    <li class="page-item">
+                        <a class="page-link day-2 rounded-lg font-semibold text-black" href="#">
+                            <p class="block month-2 my-2"></p>
+                            <span class="date-2 text-4xl"></span>
+                            <p class="year-2 mt-3 text-xs"></p>
                         </a>
                     </li>
-                      <li class="page-item mx-1">
-                        <a class="page-link rounded-lg" href="#">
-                            <p class="block month-3 my-2 text-sm"></p>
-                            <span class="date-3"></span>
-                            <p class="year-3 text-sm mt-3"></p>
+
+                    <li class="page-item">
+                        <a class="page-link day-3 rounded-lg font-semibold text-black" href="#">
+                            <p class="block month-3 my-2"></p>
+                            <span class="date-3 text-4xl"></span>
+                            <p class="year-3 mt-3 text-xs"></p>
                         </a>
                     </li>
-                    <li class="page-item mx-1">
-                        <a class="page-link rounded-lg" href="#">
-                            <p class="block month-4 my-2 text-sm"></p>
-                            <span class="date-4"></span>
-                            <p class="year-4 text-sm mt-3"></p>
+
+                    <li class="page-item">
+                        <a class="page-link day-4 rounded-lg font-semibold text-black" href="#">
+                            <p class="block month-4 my-2"></p>
+                            <span class="date-4 text-4xl"></span>
+                            <p class="year-4 mt-3 text-xs"></p>
                         </a>
                     </li>
                    
-                      <li class="page-item">
+                    <li class="page-item">
                         <a class="page-link next-label" href="#" aria-label="Next">
-                          <span aria-hidden="true">&raquo;</span>
+                            <span aria-hidden="true">&raquo;</span>
                         </a>
-                      </li>
+                    </li>
 
                     </ul>
                   </nav>
+            </div>
+
+            <div class="container div-scroll mt-8 mx-auto">
+                <!--
+                <div class="py-2 head--links border-t-2 text-lg d-flex flex-nowrap">
+                    <a href="" class="p-2 mx-2 active--link">Tasks</a>
+                    <a href="" class="p-2 mx-2">Time Due</a>
+                    <a href="" class="p-2 mx-2">Assigner</a>
+                    <div class="dropdown">
+                        <div href="" class="p-2 mx-2 h-full dropdown toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Status <i class="ml-1 text-sm fa-solid fa-chevron-down"></i></div>
+
+                        <ul class="dropdown-menu">
+                            <li>
+                            <a href="" class="dropdown-item">Action</a>
+                            </li>
+                            <li>
+                            <a href="" class="dropdown-item">Action</a>
+                            </li>
+                            <li>
+                                <a href="" class="dropdown-item">Action</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                -->
+
+                    <div class="div-scroll--bar py-2 border-t-2 overflow-x-scroll">
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Task</th>
+                                <th scope="col">Details</th>
+                                <th scope="col">Due Date</th>
+                                <th scope="col">Sender</th>
+                                <th scope="col">
+                                    <span class="dropdown">
+                                        <div href="" class="dropdown toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Incomplete</i></div>
+                
+                                        <ul class="dropdown-menu">
+                                            <li>
+                                            <a href="" class="dropdown-item">All</a>
+                                            </li>
+                                            <li>
+                                            <a href="" class="dropdown-item">Complete</a>
+                                            </li>
+                                            <li>
+                                                <a href="" class="dropdown-item">Incomplete</a>
+                                            </li>
+                                        </ul>
+                                    </span>
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                
             </div>
         </div>
 

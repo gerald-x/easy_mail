@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
 
+$text-primary: rgb(110 231 183 / 1) !important;
+
 %link-spacing {
-    padding: 1vh 0;
-    margin: 3vh auto;
+    padding: 1vh 2vw 1vh 0;
+    margin: 1vh 0;
 }
 
 %link-display {
@@ -11,7 +13,14 @@
     color: black;
 }
 
+.text-primary-color {
+    color: rgb(110 231 183 / 1) !important;
+}
+
 body {
+    overflow-x: hidden;
+}
+html {
     overflow-x: hidden;
 }
 
@@ -21,6 +30,10 @@ nav{
     }
     .nav--link{
         @extend %link-spacing;
+        width: max-content;
+        &:hover {
+            color: $text-primary;
+        }
     }
 }
 
@@ -45,7 +58,7 @@ nav{
         top: 100;
         z-index: 1000;
         right: 0;
-        transform: translateX(100%);
+        transform: translateX(200%);
     }
 
     @media screen and (max-width:991px) {
@@ -68,6 +81,9 @@ nav{
         @media screen and (max-width:991px) {
             flex: 100%;
         }
+
+        .container {
+        }
     }
 }
 
@@ -81,7 +97,7 @@ nav{
 
 @keyframes slideIn {
     from {
-        transform: translateX(100%);
+        transform: translateX(200%);
     }
     to {
         transform: translateX(0%);
@@ -90,4 +106,35 @@ nav{
 
 .brand-text {
     font-family: 'Dancing Script', cursive;
+}
+
+.head--links {
+
+    a{
+
+    &:hover {
+        transition-duration: 0.4s;
+        color: rgb(0, 0, 0, 0.45);
+        border-bottom: 2px solid $text-primary;
+    }
+}
+    .active--link {
+        border-bottom: 2px solid $text-primary;
+    }
+}
+
+
+.text-summary {
+    max-width: 35vw;
+    @media screen and (max-width:768px) {
+        max-width: 45vw ;
+    }
+    @media screen and (max-width:760px) {
+        min-width: 50vw;
+        max-width: none;
+    }
+}
+
+.div-scroll {
+    width: calc(0.95*100vw) !important;
 }
